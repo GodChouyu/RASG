@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<root>
+    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+                xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <xsd:element name="root" msdata:IsDataSet="true">
+
+        </xsd:element>
+    </xsd:schema>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral,
+            PublicKeyToken=b77a5c561934e089
+        </value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral,
+            PublicKeyToken=b77a5c561934e089
+        </value>
+    </resheader>
+    <data name="U0001Title" xml:space="preserve">
+        <value>返回值为空的异步方法</value>
+    </data>
+    <data name="U0001MessageFormat" xml:space="preserve">
+        <value>方法 {0} 为异步方法，且返回值为空</value>
+    </data>
+    <data name="U0001Description" xml:space="preserve">
+        <value>async void方法会包装为一个Task，Unity应中使用 async UniTaskVoid 代替 async void 方法.</value>
+    </data>
+    <data name="U0002Title" xml:space="preserve">
+        <value>方法返回值为System.Threading.Tasks.Task</value>
+    </data>
+    <data name="U0002MessageFormat" xml:space="preserve">
+        <value>方法 {0} 的返回值为System.Threading.Tasks.Task</value>
+    </data>
+    <data name="U0002Description" xml:space="preserve">
+        <value>Unity中应使用更轻量的 UniTask 代替 Task.</value>
+    </data>
+    <data name="U0003Title" xml:space="preserve">
+        <value>Task&lt;TResult&gt;</value>
+    </data>
+    <data name="U0003MessageFormat" xml:space="preserve">
+        <value>方法返回值为System.Threading.Tasks.Task&lt;Result&gt;</value>
+    </data>
+    <data name="U0003Description" xml:space="preserve">
+        <value>Unity中应使用更轻量的 UniTask&lt;TResult&gt; 代替 Task&lt;TResult&gt;.</value>
+    </data>
+</root>
