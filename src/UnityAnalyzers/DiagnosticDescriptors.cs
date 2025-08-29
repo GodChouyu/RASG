@@ -69,4 +69,26 @@ public static class DiagnosticDescriptors
         DiagnosticSeverity.Warning, true, U0003Description);
 
     #endregion
+
+    #region U0004
+
+    private const string U0004DiagnosticId = "U0004";
+
+    private static readonly LocalizableString U0004Title =
+        new LocalizableResourceString(nameof(Resources.U0004Title), Resources.ResourceManager,
+            typeof(Resources));
+
+    private static readonly LocalizableString U0004MessageFormat =
+        new LocalizableResourceString(nameof(Resources.U0004MessageFormat), Resources.ResourceManager,
+            typeof(Resources));
+
+    private static readonly LocalizableString U0004Description =
+        new LocalizableResourceString(nameof(Resources.U0004Description), Resources.ResourceManager,
+            typeof(Resources));
+
+    public static readonly DiagnosticDescriptor RuleU0004 = new(U0004DiagnosticId, U0004Title, U0004MessageFormat,
+        Category.Interoperability,
+        DiagnosticSeverity.Warning, true, U0004Description);
+
+    #endregion
 }

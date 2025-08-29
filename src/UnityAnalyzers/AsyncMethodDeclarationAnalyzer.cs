@@ -8,7 +8,7 @@ using Microsoft.CodeAnalysis.Diagnostics;
 namespace UnityAnalyzers;
 
 [DiagnosticAnalyzer(LanguageNames.CSharp)]
-public class AsyncMethodAnalyzer : DiagnosticAnalyzer
+public class AsyncMethodDeclarationAnalyzer : DiagnosticAnalyzer
 {
     public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics =>
     [
@@ -19,10 +19,10 @@ public class AsyncMethodAnalyzer : DiagnosticAnalyzer
     {
         context.ConfigureGeneratedCodeAnalysis(GeneratedCodeAnalysisFlags.None);
         context.EnableConcurrentExecution();
-        context.RegisterSyntaxNodeAction(AnalyzeSyntaxNode, SyntaxKind.MethodDeclaration);
+        context.RegisterSyntaxNodeAction(AnalyzeMethodDeclarationSyntaxNode, SyntaxKind.MethodDeclaration);
     }
 
-    private void AnalyzeSyntaxNode(SyntaxNodeAnalysisContext context)
+    private void AnalyzeMethodDeclarationSyntaxNode(SyntaxNodeAnalysisContext context)
     {
         var methodDeclarationSyntax = (MethodDeclarationSyntax)context.Node;
         var methodSymbol = context.SemanticModel.GetDeclaredSymbol(methodDeclarationSyntax, context.CancellationToken);
@@ -31,11 +31,8 @@ public class AsyncMethodAnalyzer : DiagnosticAnalyzer
 
         if (methodSymbol is { IsAsync: true, ReturnsVoid: true })
         {
-            var asyncLocations = methodDeclarationSyntax.Modifiers.Where(m => m.IsKind(SyntaxKind.AsyncKeyword))
-                .Select(m => m.GetLocation()).ToList();
             var u0001Diagnostic = Diagnostic.Create(DiagnosticDescriptors.RuleU0001,
                 methodDeclarationSyntax.ReturnType.GetLocation(),
-                asyncLocations,
                 methodDeclarationSyntax.Identifier);
             context.ReportDiagnostic(u0001Diagnostic);
             return;

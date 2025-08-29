@@ -8,6 +8,9 @@
 //------------------------------------------------------------------------------
 
 namespace UnityAnalyzers {
+    using System;
+    
+    
     /// <summary>
     ///   A strongly-typed resource class, for looking up localized strings, etc.
     /// </summary>
@@ -57,7 +60,7 @@ namespace UnityAnalyzers {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to async void方法会包装为一个Task，Unity应中使用 async UniTaskVoid 代替 async void 方法..
+        ///   Looks up a localized string similar to .
         /// </summary>
         internal static string U0001Description {
             get {
@@ -66,7 +69,7 @@ namespace UnityAnalyzers {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 方法 {0} 为异步方法，且返回值为空.
+        ///   Looks up a localized string similar to 方法“{0}”为“async void”方法，会包装为“System.Threading.Tasks.Task”。Unity中请考虑使用“async UniTaskVoid”代替 async void 方法。.
         /// </summary>
         internal static string U0001MessageFormat {
             get {
@@ -84,7 +87,7 @@ namespace UnityAnalyzers {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Unity中应使用更轻量的 UniTask 代替 Task..
+        ///   Looks up a localized string similar to .
         /// </summary>
         internal static string U0002Description {
             get {
@@ -93,7 +96,7 @@ namespace UnityAnalyzers {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 方法 {0} 的返回值为System.Threading.Tasks.Task.
+        ///   Looks up a localized string similar to 方法“{0}”的返回值为“System.Threading.Tasks.Task”，Unity中请考虑使用“Cysharp.Threading.Tasks.UniTask”来代替“System.Threading.Tasks.Task”。.
         /// </summary>
         internal static string U0002MessageFormat {
             get {
@@ -111,7 +114,7 @@ namespace UnityAnalyzers {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Unity中应使用更轻量的 UniTask&lt;TResult&gt; 代替 Task&lt;TResult&gt;..
+        ///   Looks up a localized string similar to .
         /// </summary>
         internal static string U0003Description {
             get {
@@ -120,7 +123,7 @@ namespace UnityAnalyzers {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 方法返回值为System.Threading.Tasks.Task&lt;Result&gt;.
+        ///   Looks up a localized string similar to 方法“{0}”返回值为&quot;System.Threading.Tasks.Task&lt;Result&gt;&quot;，Unity中请考虑使用“Cysharp.Threading.Tasks.UniTask&lt;Result&gt;”来代替“System.Threading.Tasks.Task”。.
         /// </summary>
         internal static string U0003MessageFormat {
             get {
@@ -129,11 +132,38 @@ namespace UnityAnalyzers {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Task&lt;TResult&gt;.
+        ///   Looks up a localized string similar to 方法返回值为&quot;Task&lt;TResult&gt;&quot;.
         /// </summary>
         internal static string U0003Title {
             get {
                 return ResourceManager.GetString("U0003Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        internal static string U0004Description {
+            get {
+                return ResourceManager.GetString("U0004Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 异步匿名隐式构造了“System.Threading.Tasks.Task”。Unity中请考虑使用“Cysharp.Threading.Tasks.UniTask”构造，lambda表达式可以使用“UniTask.Action( async()=&gt;{ } )”或者“UniTask.UnityAction( async ()=&gt;{ } )”方法包装。.
+        /// </summary>
+        internal static string U0004MessageFormat {
+            get {
+                return ResourceManager.GetString("U0004MessageFormat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 异步匿名隐式构造了“System.Threading.Tasks.Task”.
+        /// </summary>
+        internal static string U0004Title {
+            get {
+                return ResourceManager.GetString("U0004Title", resourceCulture);
             }
         }
     }

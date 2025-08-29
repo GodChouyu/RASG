@@ -27,27 +27,36 @@
         <value>返回值为空的异步方法</value>
     </data>
     <data name="U0001MessageFormat" xml:space="preserve">
-        <value>方法 {0} 为异步方法，且返回值为空</value>
+        <value>方法“{0}”为“async void”方法，会包装为“System.Threading.Tasks.Task”。Unity中请考虑使用“async UniTaskVoid”代替 async void 方法。</value>
     </data>
     <data name="U0001Description" xml:space="preserve">
-        <value>async void方法会包装为一个Task，Unity应中使用 async UniTaskVoid 代替 async void 方法.</value>
+        <value />
     </data>
     <data name="U0002Title" xml:space="preserve">
         <value>方法返回值为System.Threading.Tasks.Task</value>
     </data>
     <data name="U0002MessageFormat" xml:space="preserve">
-        <value>方法 {0} 的返回值为System.Threading.Tasks.Task</value>
+        <value>方法“{0}”的返回值为“System.Threading.Tasks.Task”，Unity中请考虑使用“Cysharp.Threading.Tasks.UniTask”来代替“System.Threading.Tasks.Task”。</value>
     </data>
     <data name="U0002Description" xml:space="preserve">
-        <value>Unity中应使用更轻量的 UniTask 代替 Task.</value>
+        <value />
     </data>
     <data name="U0003Title" xml:space="preserve">
-        <value>Task&lt;TResult&gt;</value>
+        <value>方法返回值为"Task&lt;TResult&gt;"</value>
     </data>
     <data name="U0003MessageFormat" xml:space="preserve">
-        <value>方法返回值为System.Threading.Tasks.Task&lt;Result&gt;</value>
+        <value>方法“{0}”返回值为"System.Threading.Tasks.Task&lt;Result&gt;"，Unity中请考虑使用“Cysharp.Threading.Tasks.UniTask&lt;Result&gt;”来代替“System.Threading.Tasks.Task”。</value>
     </data>
     <data name="U0003Description" xml:space="preserve">
-        <value>Unity中应使用更轻量的 UniTask&lt;TResult&gt; 代替 Task&lt;TResult&gt;.</value>
+        <value />
+    </data>
+    <data name="U0004Title" xml:space="preserve">
+        <value>异步匿名隐式构造了“System.Threading.Tasks.Task”</value>
+    </data>
+    <data name="U0004Description" xml:space="preserve">
+        <value />
+    </data>
+    <data name="U0004MessageFormat" xml:space="preserve">
+        <value>异步匿名隐式构造了“System.Threading.Tasks.Task”。Unity中请考虑使用“Cysharp.Threading.Tasks.UniTask”构造，lambda表达式可以使用“UniTask.Action( async()=&gt;{ } )”或者“UniTask.UnityAction( async ()=&gt;{ } )”方法包装。</value>
     </data>
 </root>
