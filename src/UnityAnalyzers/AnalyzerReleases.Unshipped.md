@@ -1,5 +1,7 @@
-### New Rules
+﻿### New Rules
 
-| Rule ID | Category | Severity | Notes                                           |
-|---------|----------|----------|-------------------------------------------------|
-| U0001   | Naming   | Warning  | Type names should not contain the company name. |
+ Rule ID | Category         | Severity | Notes 
+---------|------------------|----------|-------
+ U0001   | Interoperability | Warning  |
+ U0002   | Interoperability | Warning  |
+ U0003   | Interoperability | Warning  |

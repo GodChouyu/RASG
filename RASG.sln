@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnityAnalyzers", "src\UnityAnalyzers\UnityAnalyzers.csproj", "{BB13A1B3-6F30-4473-BA9A-69F98316E2C2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnityAnalyzer.Sample", "samples\UnityAnalyzer.Sample\UnityAnalyzer.Sample.csproj", "{C126FEED-3B6F-4D7A-8F07-3B97C3A72D06}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnityAnalyzer.Test", "tests\UnityAnalyzer.Test\UnityAnalyzer.Test.csproj", "{FDD3935B-D66C-430A-A484-4B681691D8CC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BB13A1B3-6F30-4473-BA9A-69F98316E2C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB13A1B3-6F30-4473-BA9A-69F98316E2C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB13A1B3-6F30-4473-BA9A-69F98316E2C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB13A1B3-6F30-4473-BA9A-69F98316E2C2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C126FEED-3B6F-4D7A-8F07-3B97C3A72D06}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C126FEED-3B6F-4D7A-8F07-3B97C3A72D06}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C126FEED-3B6F-4D7A-8F07-3B97C3A72D06}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C126FEED-3B6F-4D7A-8F07-3B97C3A72D06}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FDD3935B-D66C-430A-A484-4B681691D8CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FDD3935B-D66C-430A-A484-4B681691D8CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FDD3935B-D66C-430A-A484-4B681691D8CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FDD3935B-D66C-430A-A484-4B681691D8CC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

@@ -1,7 +1,7 @@
 ﻿using System.Threading.Tasks;
-using Analyzers;
 using Microsoft.CodeAnalysis.CSharp.Testing;
 using Microsoft.CodeAnalysis.Testing;
+using UnityAnalyzers;
 using Xunit;
 
 namespace UnityAnalyzer.Test;

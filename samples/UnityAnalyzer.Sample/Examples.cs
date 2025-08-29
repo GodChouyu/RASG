@@ -1,7 +1,4 @@
-﻿// ReSharper disable UnusedType.Global
-// ReSharper disable UnusedMember.Global
-
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 
 namespace UnityAnalyzer.Sample;
 

@@ -4,11 +4,9 @@
         <TargetFramework>netstandard2.0</TargetFramework>
         <LangVersion>default</LangVersion>
         <Nullable>enable</Nullable>
-        
+
         <EnforceExtendedAnalyzerRules>true</EnforceExtendedAnalyzerRules>
         <IsRoslynComponent>true</IsRoslynComponent>
-        
-        <RootNamespace>Analyzers</RootNamespace>
     </PropertyGroup>
 
     <ItemGroup>
@@ -32,10 +30,5 @@
             <AutoGen>True</AutoGen>
             <DependentUpon>Resources.resx</DependentUpon>
         </Compile>
-    </ItemGroup>
-
-    <ItemGroup>
-      <AdditionalFiles Include="AnalyzerReleases.Shipped.md" />
-      <AdditionalFiles Include="AnalyzerReleases.Unshipped.md" />
     </ItemGroup>
 </Project>

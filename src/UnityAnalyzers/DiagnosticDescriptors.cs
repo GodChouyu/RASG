@@ -1,6 +1,6 @@
 ﻿using Microsoft.CodeAnalysis;
 
-namespace Analyzers;
+namespace UnityAnalyzers;
 
 public static class DiagnosticDescriptors
 {

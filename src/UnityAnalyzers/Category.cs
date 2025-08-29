@@ -1,4 +1,4 @@
-﻿namespace Analyzers;
+﻿namespace UnityAnalyzers;
 
 public static class Category
 {

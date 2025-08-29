@@ -6,7 +6,7 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\UnityAnalyzers\UnityAnalyzers.csproj"
+        <ProjectReference Include="..\..\src\UnityAnalyzers\UnityAnalyzers.csproj"
                           OutputItemType="Analyzer" ReferenceOutputAssembly="false"/>
     </ItemGroup>
 
