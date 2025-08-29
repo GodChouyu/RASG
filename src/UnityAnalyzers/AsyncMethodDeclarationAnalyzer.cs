@@ -11,9 +11,8 @@ namespace UnityAnalyzers;
 public class AsyncMethodDeclarationAnalyzer : DiagnosticAnalyzer
 {
     public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics =>
-    [
-        DiagnosticDescriptors.RuleU0001, DiagnosticDescriptors.RuleU0002, DiagnosticDescriptors.RuleU0003
-    ];
+        ImmutableArray.Create(DiagnosticDescriptors.RuleU0001, DiagnosticDescriptors.RuleU0002,
+            DiagnosticDescriptors.RuleU0003);
 
     public override void Initialize(AnalysisContext context)
     {

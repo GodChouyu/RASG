@@ -13,9 +13,7 @@ namespace UnityAnalyzers;
 public class AnonymousFunctionExpressionAnalyzer : DiagnosticAnalyzer
 {
     public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics =>
-    [
-        DiagnosticDescriptors.RuleU0004
-    ];
+        ImmutableArray.Create(DiagnosticDescriptors.RuleU0004);
 
     public override void Initialize(AnalysisContext context)
     {
