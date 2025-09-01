@@ -60,6 +60,15 @@ namespace UnityAnalyzers {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Convert &quot;async void {0}&quot; to &quot;void {0}&quot; + &quot;async UniTaskVoid {0}&quot;.
+        /// </summary>
+        internal static string U0001CodeFixTitle {
+            get {
+                return ResourceManager.GetString("U0001CodeFixTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to .
         /// </summary>
         internal static string U0001Description {

@@ -59,4 +59,7 @@
     <data name="U0004MessageFormat" xml:space="preserve">
         <value>异步匿名隐式构造了“System.Threading.Tasks.Task”。Unity中请考虑使用“Cysharp.Threading.Tasks.UniTask”构造，lambda表达式可以使用“UniTask.Action( async()=&gt;{ } )”或者“UniTask.UnityAction( async ()=&gt;{ } )”方法包装。</value>
     </data>
+    <data name="U0001CodeFixTitle" xml:space="preserve">
+        <value>Convert "async void {0}" to "void {0}" + "async UniTaskVoid {0}"</value>
+    </data>
 </root>
