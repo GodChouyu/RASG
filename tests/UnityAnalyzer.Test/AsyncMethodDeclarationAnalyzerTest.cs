@@ -13,17 +13,19 @@ public class AsyncMethodDeclarationAnalyzerTest
     [Fact]
     public async Task ShouldReportU0001_When_AsyncVoidMethod()
     {
-        const string code = @"
-using System.Threading.Tasks;
+        const string code = """
 
-namespace UnityAnalyzer.Sample;
+                            using System.Threading.Tasks;
 
-public class Examples
-{
-    public async void AsyncVoidMethod()
-    {
-    }
-}";
+                            namespace UnityAnalyzer.Sample;
+
+                            public class Examples
+                            {
+                                public async void AsyncVoidMethod()
+                                {
+                                }
+                            }
+                            """;
         var u0001Expected = CSharpAnalyzerVerifier<AsyncMethodDeclarationAnalyzer, DefaultVerifier>.Diagnostic("U0001")
             .WithSpan(8, 18, 8, 22).WithArguments("AsyncVoidMethod");
 
@@ -35,18 +37,20 @@ public class Examples
     [Fact]
     public async Task ShouldReportU0002_When_AsyncTaskMethod()
     {
-        const string code = @"
-using System.Threading.Tasks;
+        const string code = """
 
-namespace UnityAnalyzer.Sample;
+                            using System.Threading.Tasks;
 
-public class Examples
-{
-    public async Task AsyncTaskMethod()
-    {
-        await Task.Delay(100);
-    }
-}";
+                            namespace UnityAnalyzer.Sample;
+
+                            public class Examples
+                            {
+                                public async Task AsyncTaskMethod()
+                                {
+                                    await Task.Delay(100);
+                                }
+                            }
+                            """;
         var expected = CSharpAnalyzerVerifier<AsyncMethodDeclarationAnalyzer, DefaultVerifier>
             .Diagnostic("U0002")
             .WithSpan(8, 18, 8, 22)
@@ -59,19 +63,21 @@ public class Examples
     [Fact]
     public async Task ShouldReportU0003_When_AsyncGenericTaskMethod()
     {
-        const string code = @"
-using System.Threading.Tasks;
+        const string code = """
 
-namespace UnityAnalyzer.Sample;
+                            using System.Threading.Tasks;
 
-public class Examples
-{
-    public async Task<int> AsyncGenericTaskMethod()
-    {
-        await Task.Delay(100);
-        return 42;
-    }
-}";
+                            namespace UnityAnalyzer.Sample;
+
+                            public class Examples
+                            {
+                                public async Task<int> AsyncGenericTaskMethod()
+                                {
+                                    await Task.Delay(100);
+                                    return 42;
+                                }
+                            }
+                            """;
         var expected = CSharpAnalyzerVerifier<AsyncMethodDeclarationAnalyzer, DefaultVerifier>
             .Diagnostic("U0003")
             .WithSpan(8, 18, 8, 27)

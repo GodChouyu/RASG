@@ -13,19 +13,21 @@ public class AnonymousFunctionExpressionAnalyzerTest
     [Fact]
     public async Task ShouldReportU0004_When_AnonymousFunctionExpressions1()
     {
-        const string code = @"
-using System;
-using System.Threading.Tasks;
+        const string code = """
 
-namespace UnityAnalyzer.Sample;
+                            using System;
+                            using System.Threading.Tasks;
 
-public class Examples
-{
-    public void AnonymousFunctionExpressions()
-    {
-        var f1 = async () => { };
-    }
-}";
+                            namespace UnityAnalyzer.Sample;
+
+                            public class Examples
+                            {
+                                public void AnonymousFunctionExpressions()
+                                {
+                                    var f1 = async () => { };
+                                }
+                            }
+                            """;
         var expected =
             CSharpAnalyzerVerifier<AnonymousFunctionExpressionAnalyzer, DefaultVerifier>.Diagnostic("U0004")
                 .WithSpan(11, 18, 11, 33);
@@ -36,19 +38,21 @@ public class Examples
     [Fact]
     public async Task ShouldReportU0004_When_AnonymousFunctionExpressions2()
     {
-        const string code = @"
-using System;
-using System.Threading.Tasks;
+        const string code = """
 
-namespace UnityAnalyzer.Sample;
+                            using System;
+                            using System.Threading.Tasks;
 
-public class Examples
-{
-    public void AnonymousFunctionExpressions()
-    {
-        Action f2 = async () => { };
-    }
-}";
+                            namespace UnityAnalyzer.Sample;
+
+                            public class Examples
+                            {
+                                public void AnonymousFunctionExpressions()
+                                {
+                                    Action f2 = async () => { };
+                                }
+                            }
+                            """;
         var expected =
             CSharpAnalyzerVerifier<AnonymousFunctionExpressionAnalyzer, DefaultVerifier>.Diagnostic("U0004")
                 .WithSpan(11, 21, 11, 36);
@@ -59,19 +63,21 @@ public class Examples
     [Fact]
     public async Task ShouldReportU0004_When_AnonymousFunctionExpressions3()
     {
-        const string code = @"
-using System;
-using System.Threading.Tasks;
+        const string code = """
 
-namespace UnityAnalyzer.Sample;
+                            using System;
+                            using System.Threading.Tasks;
 
-public class Examples
-{
-    public void AnonymousFunctionExpressions()
-    {
-        Func<Task> func = async delegate { };
-    }
-}";
+                            namespace UnityAnalyzer.Sample;
+
+                            public class Examples
+                            {
+                                public void AnonymousFunctionExpressions()
+                                {
+                                    Func<Task> func = async delegate { };
+                                }
+                            }
+                            """;
         var expected =
             CSharpAnalyzerVerifier<AnonymousFunctionExpressionAnalyzer, DefaultVerifier>.Diagnostic("U0004")
                 .WithSpan(11, 27, 11, 45);
